@@ -506,7 +506,6 @@ response = client.models.generate_content(
     config=types.GenerateContentConfig(
         image_config=types.ImageConfig(
             aspect_ratio=aspect_ratio,
-            image_size=resolution
         ),
         # Optional
         tools=[
@@ -580,7 +579,6 @@ operation = client.models.generate_videos(
     prompt='Panning wide shot of a calico kitten sleeping in the sunshine',
     image=image,
     config=types.GenerateVideosConfig(
-        person_generation='dont_allow',  # 'dont_allow' or 'allow_adult'
         aspect_ratio='16:9',  # '16:9' or '9:16'
         number_of_videos=1, # supported value is 1-4, use 1 by default
         duration_seconds=8, # supported value is 5-8

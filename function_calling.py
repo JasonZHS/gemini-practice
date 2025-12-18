@@ -15,7 +15,7 @@ client = genai.Client()
 
 response = client.models.generate_content(
     model='gemini-3-flash-preview',
-    contents='Use the tool you have to answer this question: What is the weather in SF?',
+    contents='Use the tool you have to answer this question: What is the weather in Boston?',
     config=types.GenerateContentConfig(
         tools=[get_current_weather] # Make the function available to the model as a tool
     ),
